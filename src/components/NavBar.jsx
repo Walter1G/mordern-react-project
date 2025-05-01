@@ -59,32 +59,34 @@ function NavBar() {
       </div>
 
       {/* mobilemenuItems */}
-      {isMenuOpen && (
-        <div clasName="md:hidden bg-white border-t py-4  border-gray-100">
-          <div className="container mx-auto space-y-3 px-4">
-            {navLinks.map((link, i) => (
-              <a
-                className={`block text-sm font-medium py-2 ${
-                  activeLink == link.href ? "text-blue-600" : "text-gray-900"
-                }`}
-                key={i}
-                    href={link.href}
-                    onClick={() => {
-                        setActiveLink(link.href)
-                        setIsMenuOpen(false)
-                    }}
-              >
-                {link.label}
-              </a>
-            ))}
+      
+        {isMenuOpen && (
+          <div clasName="md:hidden bg-white border-t py-4  border-gray-100">
+            <div className="container mx-auto space-y-3 px-4">
+              {navLinks.map((link, i) => (
+                <a
+                  className={`block text-sm font-medium py-2 ${
+                    activeLink == link.href ? "text-blue-600" : "text-gray-900"
+                  }`}
+                  key={i}
+                  href={link.href}
+                  onClick={() => {
+                    setActiveLink(link.href);
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  {link.label}
+                </a>
+              ))}
 
-            {/* get in touch btn */}
-            <button className="w-full bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm font-medium hover:shadow-lg hover:shadow-blue-100 transition-all">
-              <a href="#newsletter">Get In Touch</a>
-            </button>
+              {/* get in touch btn */}
+              <button className="w-full bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm font-medium hover:shadow-lg hover:shadow-blue-100 transition-all">
+                <a href="#newsletter">Get In Touch</a>
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+   
     </nav>
   );
 }
