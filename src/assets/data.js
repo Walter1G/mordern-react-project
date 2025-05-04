@@ -1,7 +1,7 @@
 
 //   purpose section
 
-export const features = [
+export const purposeFeatures = [
     {
       icon: "🟣", // Replace with your actual icon component or image
       title: "Built for impact",

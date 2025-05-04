@@ -1,5 +1,7 @@
+import CompanyLogo from "./components/CompanyLogo";
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
+import PurposeSection from "./components/PurposeSection";
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <div className="overflow-hidden">
         <NavBar />
         <Hero />
+        <CompanyLogo />
+        <PurposeSection />
       </div>
     </main>
   );
